@@ -1,0 +1,784 @@
+<?php 
+/**
+ * Template Name: Dashboard
+ */
+get_header();
+?>
+<style type="text/css">
+.btn-play{
+	top:53% !important
+}
+</style>
+<main class="dashboard">
+	<div class="player">
+		<div class="player--inner player-container">
+			<div class="player--inner-wrapper">				
+				<h1>Measure<span>Summit</span> 2020</h1>
+				<p>The First Virtual Event Dedicated to Leveraging Measurement, Data, and Analytics for Business Growth.</p>
+				<div class="player--main">
+					<div class="player--main-inner">
+						<button class="btn-play"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="50" cy="50" r="50" fill="#EBB129"/>
+							<path d="M66.38 52.786L40.93 67.552C38.771 68.804 36 67.288 36 64.765V35.233c0-2.52 2.768-4.04 4.931-2.784L66.38 47.215a3.208 3.208 0 010 5.571z" fill="#fff"/>
+							</svg>
+						</button>					
+						
+						<div class="the-player">
+							
+						</div>
+
+					</div>
+				</div>
+
+				<div class="player--navigation">
+					<div class="player--nav prev presenting-now">
+						<span>Presenting Now</span>
+						<div class="user">
+							<div class="avatar"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/kirsta.jpg" /></div>
+							<div class="topic">
+								<h2 class="topic-title">How to Perfect Your Existing Web Analytics</h2>
+								<div class="topic-host">hosted by <a href="#">Krista Seiden</a>   |  <span class="time">09:00 - 09:30 am</span> </div>
+							</div>
+						</div>
+					</div>
+					<div class="player--nav next presenting-next">
+						<span>Up next</span>
+						<div class="user">
+							<div class="avatar"><img src="<?= get_stylesheet_directory_uri(); ?>/assets/img/ahmad.jpg" /></div>
+							<div class="topic">
+								<h2 class="topic-title">Delay Facebook Pixel with Google Tag Manager</h2>
+								<div class="topic-host">hosted by <a href="#">Ahmad Kanani</a>   |  <span class="time">09:00 - 09:30 am</span> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<aside class="player--sidebar player-container"  x-data="{ tabsidebar: 'schedule' }">
+			<div class="player--sidebar-ctrl">
+				<button
+					 :class="{ 'active': tabsidebar === 'schedule' }"  
+					 @click="tabsidebar = 'schedule'">
+				 	<svg width="20" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 1v4M6 1v4M1 9h18M3 3h14a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				 </button>
+				<button 
+					:class="{ 'active': tabsidebar === 'livechat' }" 
+					@click="tabsidebar = 'livechat'">
+					<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 13a2 2 0 01-2 2H5l-4 4V3a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</button>
+				<button 
+					:class="{ 'active': tabsidebar === 'ask' }" 
+					@click="tabsidebar = 'ask'">
+					<svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.778 7.836c.196-.52.583-.958 1.092-1.237a2.656 2.656 0 011.69-.288c.583.093 1.11.376 1.491.797.38.421.589.955.588 1.506 0 1.554-2.502 2.332-2.502 2.332m.067 3.11h.009" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 10.444a9.311 9.311 0 01-1 4.223 9.445 9.445 0 01-8.444 5.222 9.311 9.311 0 01-4.223-1L1 21l2.111-6.333a9.311 9.311 0 01-1-4.223A9.444 9.444 0 017.333 2a9.311 9.311 0 014.223-1h.555A9.422 9.422 0 0121 9.889v.556z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</button>
+			</div>
+			<!-- schedule tab -->
+			<div x-show="tabsidebar === 'schedule'" class="schedule" style="display:none;">
+				<div class="tab-heading">					
+					<h2>Schedule </h2>
+					<button class="btn-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1l12 12" stroke="#99A1A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+				</div>
+				<div x-data="{ tab: 'day1' }" class="day--schedule">
+					<div class="day--schedule-tabs">						
+					    <button :class="{ 'active': tab === 'day1' }" @click="tab = 'day1'">DAY 1</button>
+					    <button :class="{ 'active': tab === 'day2' }" @click="tab = 'day2'">DAY 2</button>
+					    <button :class="{ 'active': tab === 'day3' }" @click="tab = 'day3'">DAY 3</button>
+					</div>
+				    <div x-show="tab === 'day1'" class="day--schedule-details">
+				    	<h3>Day 1: September 22, 2020</h3>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="25" fill="#4990E2"/><path d="M30 22.5h.833a3.333 3.333 0 110 6.667H30m0-6.667H16.667V30A3.333 3.333 0 0020 33.333h6.667A3.333 3.333 0 0030 30v-7.5zm-10-5.833v2.5m3.333-2.5v2.5m3.334-2.5v2.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Break</div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div x-show="tab === 'day2'" class="day--schedule-details">
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div x-show="tab === 'day3'" class="day--schedule-details">
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:00 - 09:30 am </div>
+				    			<div class="title">How to Perfect Your Existing Web Analytics</div>
+				    			<div class="host">hosted by <a href="#">Krista Seiden</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    	<div class="schedule--timeline">
+				    		<div class="avatar"><img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt=""></div>
+				    		<div class="schedule--details">
+				    			<div class="time">09:30 - 10:00 am </div>
+				    			<div class="title">Delay Facebook Pixel with Google Tag Manager</div>
+				    			<div class="host">hosted by <a href="#">Ahmad Kanani</a></div>
+				    		</div>
+				    	</div>
+				    </div>
+				</div>
+			</div>
+			<!-- end schedule tab -->
+
+			<!-- live chat -->
+			<div x-show="tabsidebar === 'livechat'"  class="livechat" style="display:none;">
+				<div class="tab-heading">
+					<h2>Live Chat</h2>
+					<button class="btn-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1l12 12" stroke="#99A1A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+				</div>
+				<div class="watching-now">1,234 watching now  •  Started streaming 10 minutes ago</div>
+				<div class="chatbox">
+					<div class="chatbox--inner">
+
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">Bryan Smith</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">David Green</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+							</div>
+						</div>
+
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">James Walker</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">Bryan Smith</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">David Green</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+							</div>
+						</div>
+
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">James Walker</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">Bryan Smith</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</div>
+						</div>
+
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">David Green</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+							</div>
+						</div>
+
+						<div class="chatbox--comment">
+							<div class="avatar">
+								<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+							</div>
+							<div class="chatbox--comment-user">
+								<span class="displayname">James Walker</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="comment">
+					<div class="comment--inner">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+						</div>
+						<div class="comment--input">							
+							<!-- <textarea name="comment" id="comment"  placeholder="Say Something"></textarea> -->
+							<input type="text" name="comment" id="comment" placeholder="Say Something">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end livechat -->
+			<!-- ask a question-->
+			<div x-show="tabsidebar === 'ask'" class="askaquestion" style="display:none;">
+				<div class="tab-heading">					
+					<h2>Ask A Question </h2>
+					<button class="btn-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L1 13M1 1l12 12" stroke="#99A1A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+				</div>
+				<div class="questions">
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">Samantha Anderson</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:00 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">David Smith</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:10 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">Samantha Anderson</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:00 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">David Smith</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:10 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">Samantha Anderson</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:00 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">David Smith</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:10 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">Samantha Anderson</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:00 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">David Smith</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:10 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/kirsta.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">Samantha Anderson</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:00 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi?</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="questions-item">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+						</div>
+						<div class="questions-details">
+							<h3 class="name">David Smith</h3>
+							<div class="metadata">Member  •  September 22, 2020 at 09:10 am</div>
+							<div class="question-main">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="question">
+					<div class="question--inner">
+						<div class="avatar">
+							<img src="<?=get_stylesheet_directory_uri();?>/assets/img/ahmad.jpg" alt="">
+						</div>
+						<div class="question--input">							
+							<input type="text" name="question" id="question" placeholder="Ask a question">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end ask a question -->
+		</aside>
+	</div>
+
+	<div class="companies">
+		<div class="companies--inner">
+			<div class="heading">
+				<h2>Brought to you by:</h2>
+			</div>
+			<div class="companies-container">				
+				<div class="companies--logo">
+					<img src="<?=get_stylesheet_directory_uri();?>/assets/img/supermetrics.png" alt="">
+				</div>
+				<div class="companies--logo">
+					<img src="<?=get_stylesheet_directory_uri();?>/assets/img/measuremarketing.png" alt="">
+				</div>
+				<div class="companies--logo">
+					<img src="<?=get_stylesheet_directory_uri();?>/assets/img/measureschool.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+	  let youtubeVideoId = "";
+      var tag = document.createElement('script');
+	  let player;
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      
+      function onYouTubeIframeAPIReady() {
+		if(youtubeVideoId !=""){
+			player = new YT.Player('player', {
+				height: '390',
+				width: '640',
+				videoId: youtubeVideoId,
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				},
+				playerVars: {
+					showinfo: 0
+				}
+			});
+		}
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+
+			/* 
+			-1 (unstarted)
+			0 (ended)
+			1 (playing)
+			2 (paused)
+			3 (buffering)
+			5 (video cued).
+			*/
+			console.log(event.data);
+			$(".btn-play").show();
+			switch(event.data){
+				case 1: 
+					$(".btn-play").hide();
+					break;
+
+				case 2: case -1: case 5: case 3:
+					$(".btn-play").show();
+					break;
+			}
+			 
+
+		
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+
+	  jQuery(document).on("click", ".btn-play", () => {
+		player.playVideo();
+	  });
+
+	  
+	  jQuery(document).ready( () => {
+			loadPlayer = () => {
+				$.ajax({
+					url: "<?=admin_url("admin-ajax.php?action=dashboard_player");?>",
+					dataType:"json",
+					data: {
+						dashboardid: <?=get_the_id()?>
+					},
+					beforeSend: () => {
+
+					},
+					success: (data) => {
+						console.log("DATA", data);
+						if(youtubeVideoId != data.current_video_id){
+							youtubeVideoId = data.current_video_id;
+							$(".the-player").html(`<div id="player"></div>`);
+						}
+						
+						setTimeout( ()=> {
+							onYouTubeIframeAPIReady();
+						}, 50);
+
+						// .presenting-now
+						console.log("CURRENT SPEAKER",data.current_speaker);
+						console.log("NEXT SPEAKER",data.next_speaker);
+
+						presentingNow = "";
+						presentingNext = "";
+
+						if(data.current_speaker){
+							presentingNow = `
+								<span>Presenting Now</span>
+								<div class="user">
+									<div class="avatar"><img src="${data.current_speaker.speaker.avatar}" /></div>
+									<div class="topic">
+										<h2 class="topic-title">${data.current_speaker.topic}</h2>
+										<div class="topic-host">hosted by <a href="${data.current_speaker.speaker.speaker_link}">${data.current_speaker.speaker.name}</a>   |  
+										<span class="time">${data.current_speaker.time}</span> </div>
+									</div>
+								</div>
+							`;
+						}
+
+						if(data.next_speaker){
+							presentingNext = `
+								<span>Up next</span>
+								<div class="user">
+									<div class="avatar"><img src="${data.next_speaker.speaker.avatar}" /></div>
+									<div class="topic">
+										<h2 class="topic-title">${data.next_speaker.topic}</h2>
+										<div class="topic-host">hosted by <a href="${data.next_speaker.speaker.speaker_link}">${data.next_speaker.speaker.name}</a>   |  
+										<span class="time">${data.next_speaker.time}</span> </div>
+									</div>
+								</div>
+							`;
+						}
+
+						$(".presenting-next").html(presentingNext);
+						$(".presenting-now").html(presentingNow);
+
+					}
+				});
+			}
+
+			setTimeout( () => {
+				loadPlayer();
+			}, 200);
+
+			setInterval( () => {
+				//loadPlayer();
+			}, 10000);
+
+			 
+	  });
+
+    </script>
+	
+</main>
+
+
+ <?php get_footer(); ?>

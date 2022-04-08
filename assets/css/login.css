@@ -1,0 +1,476 @@
+@media only screen and (max-width: 1080px) {
+  html, body {
+    height: auto;
+  }
+}
+
+@media screen and (max-height: 725px) {
+  html, body {
+    height: auto;
+  }
+}
+
+.login {
+  background: url("../img/measurebg.jpg") no-repeat center top/cover;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 360px) {
+  .login.bb-login #login {
+    width: calc(100% - 40px) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.login #login {
+  width: calc(100% - 40px);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.login #login > h1 a {
+  max-width: 320px;
+  width: 100%;
+}
+
+.login #login .login-heading {
+  background: #fff;
+  margin: 100px auto 0;
+  border-radius: 15px 15px 0 0;
+  padding-top: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+form#resetpassform {
+	margin: 0;
+	border: none;
+	padding: 20px 20px 30px;
+	background: #fff;
+	border-radius: 0 0 15px 15px;
+}
+
+.login.bb-login p.message.reset-pass, .login.bb-login p.message.reset-pass {
+	text-align: center;
+	font-size: 24px !important;
+	padding:20px !important;
+}
+p#backtoblog {
+    background: #fff;
+    margin: 0;
+    text-align: center;
+    padding: 30px !important;
+    border-radius: 0 0 15px 15px;
+}
+@media only screen and (max-width: 768px) {
+  .login #login .login-heading {
+    margin-top: 50px;
+  }
+}
+
+.login #login .login-heading h2 {
+  font-weight: bold !important;
+  font-size: 32px !important;
+  line-height: 37px !important;
+  color: #2d3e50 !important;
+  margin: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #login .login-heading h2 {
+    font-size: 25px !important;
+  }
+}
+
+.login #login > .message {
+  background: #fff !important;
+  margin: 100px auto 0;
+  border-radius: 15px 15px 0 0;
+  padding-top: 60px !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login #login > .message > div {
+  font-weight: bold;
+  font-size: 32px !important;
+  line-height: 37px;
+  color: #2d3e50;
+  margin: 0;
+  display: block;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #login > .message > div {
+    font-size: 25px !important;
+  }
+}
+
+.login #login > .message > .message {
+  background: #fff;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #667777;
+  margin: 0;
+}
+
+.login #login #login_error {
+  margin: 0;
+  background: #fff;
+  border-radius: 0;
+  padding: 30px 50px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #login #login_error {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.login #login #login_error .error-msg {
+  background: rgba(234, 24, 24, 0.1);
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ea1818;
+  padding: 19px 23px;
+}
+
+.login #login #login_error .error-msg strong {
+  font-weight: normal;
+}
+
+.login #lostpasswordform {
+  background: #ffffff;
+  border-radius: 0 0 15px 15px;
+  margin: 0;
+  padding: 31px 50px 64px;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #lostpasswordform {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+}
+
+.login #lostpasswordform > p {
+  position: relative;
+}
+
+.login #lostpasswordform input::-webkit-input-placeholder {
+  color: #667777;
+}
+
+.login #lostpasswordform input::-moz-placeholder {
+  color: #667777;
+}
+
+.login #lostpasswordform input:-ms-input-placeholder {
+  color: #667777;
+}
+
+.login #lostpasswordform input:-moz-placeholder {
+  color: #667777;
+}
+
+.login #lostpasswordform input[type="text"] {
+  width: 100%;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  margin: 0;
+  padding-left: 53px !important;
+}
+
+.login #lostpasswordform label[for="user_login"] {
+  width: 17.5px !important;
+  height: 14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  left: 21px !important;
+}
+
+.login #lostpasswordform label[for="user_login"]::before {
+  content: "" !important;
+  width: 17.5px !important;
+  height: 14px;
+  background: url("../img/email.svg") no-repeat center center/contain;
+  top: auto !important;
+  margin: 0 !important;
+  display: block;
+}
+
+.login #lostpasswordform .submit {
+  clear: both;
+}
+
+.login #lostpasswordform .submit input[type="submit"] {
+  margin-top: 40px;
+  width: 100%;
+  height: 60px;
+  background: #55af48;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 0;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #lostpasswordform .submit input[type="submit"] {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+.login #lostpasswordform .submit input[type="submit"]:hover {
+  background: #c0392b;
+}
+
+.login #lostpasswordform .bs-sign-in {
+  display: block !important;
+  margin: 60px auto 0 !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+  text-align: center !important;
+  color: #55af48 !important;
+  -webkit-transition: 0.5s all ease !important;
+  transition: 0.5s all ease !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #lostpasswordform .bs-sign-in {
+    margin-top: 40px !important;
+  }
+}
+
+.login #lostpasswordform .bs-sign-in:hover {
+  color: #c0392b !important;
+}
+
+.login #loginform {
+  background: #ffffff;
+  border-radius: 0 0 15px 15px;
+  margin: 0;
+  padding: 31px 50px 64px;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #loginform {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.login #loginform > p {
+  position: relative;
+}
+
+.login #loginform input::-webkit-input-placeholder {
+  color: #667777;
+}
+
+.login #loginform input::-moz-placeholder {
+  color: #667777;
+}
+
+.login #loginform input:-ms-input-placeholder {
+  color: #667777;
+}
+
+.login #loginform input:-moz-placeholder {
+  color: #667777;
+}
+
+.login #loginform input[type="text"] {
+  width: 100%;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  margin: 0;
+  padding-left: 53px !important;
+}
+
+.login #loginform input[type="password"] {
+  width: 100%;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  margin: 0;
+  padding-right: 44px !important;
+  padding-left: 53px !important;
+}
+
+.login #loginform label[for="user_login"] {
+  width: 17.5px !important;
+  height: 14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+}
+
+.login #loginform label[for="user_login"]::before {
+  content: "" !important;
+  width: 17.5px !important;
+  height: 14px;
+  background: url("../img/email.svg") no-repeat center center/contain;
+  top: auto !important;
+  left: 21px !important;
+  margin: 0 !important;
+}
+
+.login #loginform .user-pass-wrap {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.login #loginform .wp-pwd::before {
+  content: "" !important;
+  width: 14.4px !important;
+  height: 16px;
+  background: url("../img/pw.svg") no-repeat center center/contain;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 21px !important;
+  margin: 0 !important;
+}
+
+.login #loginform .wp-pwd .wp-hide-pw {
+  height: 54px;
+  padding: 0;
+}
+
+.login #loginform .wp-pwd .wp-hide-pw .dashicons {
+  top: 50%;
+  color: #122b46;
+  opacity: 0.5;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 20px;
+  color: #667777;
+  opacity: 1;
+  left: 0;
+  margin: 0;
+}
+
+.login #loginform .forgetmenot {
+  padding: 0;
+}
+
+.login #loginform .forgetmenot label {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #667777;
+}
+
+.login #loginform .forgetmenot span.checkbox {
+  border: 1px solid #55af48;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.login #loginform .forgetmenot span.checkbox.on {
+  background-color: #55af48;
+  border-color: #0da371;
+}
+
+.login #loginform .lostmenot {
+  padding: 0;
+}
+
+.login #loginform .lostmenot a {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #55af48;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.login #loginform .lostmenot a:hover {
+  color: #c0392b;
+}
+
+.login #loginform .submit {
+  clear: both;
+}
+
+.login #loginform .submit input[type="submit"] {
+  margin-top: 40px;
+  width: 100%;
+  height: 60px;
+  background: #55af48;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 0;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #loginform .submit input[type="submit"] {
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+.login #loginform .submit input[type="submit"]:hover {
+  background: #c0392b;
+}
+
+.login #loginform .signup {
+  margin: 60px auto 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #667777;
+}
+
+@media only screen and (max-width: 600px) {
+  .login #loginform .signup {
+    margin-top: 40px;
+  }
+}
+
+.login #loginform .signup a {
+  color: #55af48;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.login #loginform .signup a:hover {
+  color: #c0392b;
+}
+/*# sourceMappingURL=login.css.map */
